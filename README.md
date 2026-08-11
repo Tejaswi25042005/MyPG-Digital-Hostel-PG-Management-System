@@ -216,10 +216,10 @@ Potential future improvements include:
 
 ## 👨‍💻 Developer
 
-**SAI TEJA THANNEERU**
+**TEJASWI YADLAPALLI**
 
 GitHub:
-[https://github.com/SAITEJA-THANNEERU](https://github.com/SAITEJA-THANNEERU)
+[https://github.com/Tejaswi25042005](https://github.com/Tejaswi25042005)
 
 ---
 
