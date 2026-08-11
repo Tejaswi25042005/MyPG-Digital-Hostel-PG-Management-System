@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:text="Create Notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:maxLines="1"
+        android:inputType="textCapSentences" />
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message"
+        android:minLines="3"
+        android:gravity="top"
+        android:layout_marginTop="10dp"
+        android:inputType="textMultiLine|textCapSentences" />
+
+    <!-- NOTICE TYPE -->
+    <TextView
+        android:text="Notice Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:textColor="#000" />
+
+    <RadioGroup
+        android:id="@+id/rgType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment"
+            android:checked="true"
+            android:drawableStart="@drawable/ic_money"
+            android:drawablePadding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbMaintenance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maintenance"
+            android:drawableStart="@drawable/ic_maintenance"
+            android:drawablePadding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food"
+            android:drawableStart="@drawable/ic_food"
+            android:drawablePadding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rbGeneral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General"
+            android:drawableStart="@drawable/notice"
+            android:drawablePadding="8dp" />
+
+    </RadioGroup>
+
+
+
+</LinearLayout>

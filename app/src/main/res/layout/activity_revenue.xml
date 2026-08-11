@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA">
+
+    <!-- Month Selector -->
+    <LinearLayout
+        android:id="@+id/layoutMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/white">
+
+        <!-- Previous Month -->
+        <ImageView
+            android:id="@+id/btnPrevMonth"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_arrow_left"
+            android:contentDescription="Previous Month"
+            android:padding="4dp" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="1dp" />
+
+        <!-- Month Text -->
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="January 2026"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="1dp" />
+
+        <!-- Next Month -->
+        <ImageView
+            android:id="@+id/btnNextMonth"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Next Month"
+            android:padding="4dp" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="1dp" />
+
+        <!-- Calendar Picker -->
+        <ImageView
+            android:id="@+id/btnCalendar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_calendar"
+            android:contentDescription="Select Month"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+    <!-- Revenue Cards -->
+    <GridLayout
+        android:id="@+id/gridRevenue"
+        android:layout_below="@id/layoutMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="12dp">
+
+        <!-- Expected -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_orange">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Revenue"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvExpectedAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹45,000"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Collected -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_green">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collected"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvCollectedAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹37,000"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Pending -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_red">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvPendingAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹8,000"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Tenants Paid -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_blue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tenants Paid"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvPaidTenants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 / 10"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tvTenantsHeader"
+        android:layout_below="@id/gridRevenue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tenants"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Tenants RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTenantRevenue"
+        android:layout_below="@id/tvTenantsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_tenant_revenue" />
+
+    <!-- Download PDF FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:contentDescription="Download Revenue PDF"
+        android:src="@drawable/ic_download"
+        app:backgroundTint="#3F51B5"
+        android:visibility="gone"
+        app:tint="@android:color/white"
+        app:elevation="8dp" />
+
+
+</RelativeLayout>

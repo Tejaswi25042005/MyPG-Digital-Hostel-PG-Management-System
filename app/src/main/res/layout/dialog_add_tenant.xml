@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvRoomInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:text="Floor 1 • Room 101" />
+
+        <!-- Tenant Name -->
+        <EditText
+            android:id="@+id/etTenantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tenant Name"
+            android:inputType="textPersonName" />
+
+        <!-- Mobile -->
+        <EditText
+            android:id="@+id/etTenantMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:layout_marginTop="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="#DDD" />
+
+        <!-- Monthly Rent -->
+        <EditText
+            android:id="@+id/etMonthlyRent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Monthly Rent (₹)"
+            android:inputType="number" />
+
+        <!-- Deposit -->
+        <EditText
+            android:id="@+id/etDeposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deposit Amount (₹)"
+            android:inputType="number"
+            android:layout_marginTop="12dp" />
+
+        <!-- Refundable -->
+        <EditText
+            android:id="@+id/etRefundable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Refundable Amount (₹)"
+            android:inputType="number"
+            android:layout_marginTop="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="#DDD" />
+
+        <!-- Room Info -->
+
+
+    </LinearLayout>
+</ScrollView>

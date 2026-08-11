@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="Tenant Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvRoom"
+        android:text="Room 101 • Floor 1"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvRent"
+        android:text="Rent: ₹8000"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvPaid"
+        android:text="Paid: ₹4000"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvPending"
+        android:text="Pending: ₹4000"
+        android:textColor="#F44336"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- 🔘 PAYMENT TYPE -->
+    <RadioGroup
+        android:id="@+id/rgPaymentType"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbFull"
+            android:text="Full Payment"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/rbPartial"
+            android:text="Partial Payment"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <!-- ✏️ AMOUNT INPUT (ONLY FOR PARTIAL) -->
+    <EditText
+        android:id="@+id/etAmount"
+        android:hint="Enter partial amount"
+        android:inputType="number"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- SWIPE TO COLLECT -->
+    <FrameLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_swipe_green"
+        android:padding="4dp">
+
+        <!-- CENTER TEXT -->
+        <TextView
+            android:id="@+id/tvSwipeText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Swipe to Collect Rent"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+        <!-- DRAG CIRCLE -->
+        <View
+            android:id="@+id/swipeThumb"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_swipe_thumb"/>
+    </FrameLayout>
+
+</LinearLayout>

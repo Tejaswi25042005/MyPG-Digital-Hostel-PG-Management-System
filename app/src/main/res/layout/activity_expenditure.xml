@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".expenses.ExpenditureActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutMonthSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/white">
+
+        <!-- Previous Month -->
+        <ImageView
+            android:id="@+id/ivPreviousMonth"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_arrow_left"
+            android:contentDescription="Previous Month"
+            android:padding="4dp" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="1dp" />
+
+        <!-- Month Text -->
+        <TextView
+            android:id="@+id/tvSelectedMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="January 2026"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="1dp" />
+
+        <!-- Next Month -->
+        <ImageView
+            android:id="@+id/ivNextMonth"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Next Month"
+            android:padding="4dp" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="1dp" />
+
+        <!-- Calendar Picker -->
+        <ImageView
+            android:id="@+id/ivOpenMonthPicker"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_calendar"
+            android:contentDescription="Select Month"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+    <!-- ================= LIST ================= -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutMonthSelector"
+        android:padding="12dp" />
+
+
+    <!-- ================= EMPTY VIEW ================= -->
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_money" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No expenses added"
+            android:layout_marginTop="10dp"
+            android:textColor="#777"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Expense"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/purple_500"/>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/cardTop"
+        layout="@layout/item_quick_action_single"/>
+
+    <include
+        android:id="@+id/cardBottom"
+        layout="@layout/item_quick_action_single"/>
+
+</LinearLayout>
+

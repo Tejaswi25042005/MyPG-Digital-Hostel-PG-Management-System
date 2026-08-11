@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="#F4F6FB"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".servicerequests.ServiceRequestDetailActivity">
+
+    <!-- ================= TOP BAR ================= -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/primary">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivBack"
+            android:layout_marginStart="16dp"
+            android:text="Service Request"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- ================= CONTENT ================= -->
+    <ScrollView
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ================= TENANT CARD ================= -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTenant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <!-- AVATAR -->
+                    <TextView
+                        android:id="@+id/tvAvatar"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_circle_avatar"
+                        android:text="R"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:gravity="center" />
+
+                    <!-- TENANT NAME -->
+                    <TextView
+                        android:id="@+id/tvTenantName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/tvAvatar"
+                        android:layout_marginStart="14dp"
+                        android:text="Ravi Kumar"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121" />
+
+                    <!-- ROOM INFO -->
+                    <TextView
+                        android:id="@+id/tvRoomInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvTenantName"
+                        android:layout_toEndOf="@id/tvAvatar"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Room 101 • Floor 1"
+                        android:textSize="13sp"
+                        android:textColor="#757575" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ================= ISSUE DETAILS ================= -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardIssue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardTenant"
+                android:layout_marginTop="14dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <!-- STATUS -->
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OPEN"
+                        android:textSize="12sp"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="6dp"
+                        android:background="@drawable/bg_status_badge_red" />
+
+                    <!-- ISSUE TITLE -->
+                    <TextView
+                        android:id="@+id/tvIssueTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Water leakage"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121" />
+
+                    <!-- CATEGORY -->
+                    <TextView
+                        android:id="@+id/tvCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvIssueTitle"
+                        android:layout_marginTop="4dp"
+                        android:text="Plumbing"
+                        android:textSize="12sp"
+                        android:textColor="#3F51B5" />
+
+                    <!-- DESCRIPTION -->
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvCategory"
+                        android:layout_marginTop="10dp"
+                        android:text="Water leaking continuously from pipe"
+                        android:textSize="14sp"
+                        android:textColor="#444444" />
+
+                    <!-- CREATED AT -->
+                    <TextView
+                        android:id="@+id/tvCreatedAt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvDescription"
+                        android:layout_marginTop="12dp"
+                        android:text="Requested on 12 Feb 2026"
+                        android:textSize="12sp"
+                        android:textColor="#888888" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ================= ACTION BUTTONS ================= -->
+            <RelativeLayout
+                android:id="@+id/layoutActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardIssue"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mark In Progress"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="12dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

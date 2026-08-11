@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".hostels.RaiseHostelRequestActivity">
+
+    <!-- ================= APP BAR ================= -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        app:elevation="4dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Raise Hostel Request"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_back"
+            android:background="@android:color/black" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- ================= CONTENT ================= -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_black_stroke_card">
+
+            <!-- ================= FORM CARD ================= -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_black_stroke_card"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:text="Hostel Details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Hostel Name -->
+                    <EditText
+                        android:id="@+id/etHostelName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Hostel / PG Name"
+                        android:textColor="@color/black"
+                        android:inputType="textCapWords"
+                        android:background="@drawable/bg_edittext"
+                        android:padding="12dp" />
+
+                    <!-- PG Type -->
+                    <EditText
+                        android:id="@+id/etPgType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="PG Type (Boys / Girls / Co-Living)"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bg_edittext"
+                        android:padding="12dp"
+                        android:layout_marginTop="12dp" />
+
+                    <!-- Pick Location -->
+                    <LinearLayout
+                        android:id="@+id/layoutPickLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="12dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_edittext"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/ivPickLocation"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_location"
+                            app:tint="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pick Location"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="12dp" />
+                    </LinearLayout>
+
+                    <!-- Selected Address -->
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No location selected"
+                        android:textSize="13sp"
+                        android:textColor="#666666"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ================= SUBMIT BUTTON ================= -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitRequest"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Raise Hostel Request"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                app:cornerRadius="14dp"
+                app:backgroundTint="@color/black" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

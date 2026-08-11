@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prices (Monthly)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- ADD SHARING ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etSharing"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="Sharing (2,3,4)"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etSharingPrice"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="Price (₹)"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnAddSharing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- SHARING LIST -->
+        <LinearLayout
+            android:id="@+id/layoutSharingList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp" />
+
+        <!-- DEPOSIT -->
+        <EditText
+            android:id="@+id/etDeposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deposit Amount (₹)"
+            android:inputType="number"
+            android:layout_marginTop="16dp" />
+
+        <!-- REFUND INFO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refund on vacating = Deposit − ₹1000"
+            android:textSize="12sp"
+            android:textColor="#777777"
+            android:layout_marginTop="6dp" />
+
+        <!-- BUTTONS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

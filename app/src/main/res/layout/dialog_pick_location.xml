@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select PG Location"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Search Place -->
+    <EditText
+        android:id="@+id/etSearchPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Search place / area"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:padding="12dp"
+        android:background="@drawable/et_background"
+        android:inputType="text" />
+
+    <!-- MapView -->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/dialogMapView"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="12dp" />
+
+    <!-- Selected Address -->
+    <TextView
+        android:id="@+id/tvDialogAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:text="Fetching current location address..."
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:minLines="2"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:textIsSelectable="true"
+        android:background="@drawable/et_background" />
+
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/btnConfirmLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Confirm Location"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
