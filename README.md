@@ -129,7 +129,7 @@ API keys should be configured locally before building the application.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/SAITEJA-THANNEERU/MyPG-Digital-Hostel-PG-Management-System-.git
+git clone https://github.com/Tejaswi25042005/MyPG-Digital-Hostel-PG-Management-System-.git
 ```
 
 ### 2. Open the project
